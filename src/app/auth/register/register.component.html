@@ -1,0 +1,260 @@
+<!-- <div
+  class="min-w-screen min-h-screen bg-gray-900 flex items-center justify-center px-5 py-5"
+>
+  <div
+    class="bg-gray-100 text-gray-500 rounded-3xl shadow-xl w-full overflow-hidden"
+    style="max-width: 1000px"
+  >
+    <div class="md:flex w-full">
+      <div class="hidden md:block w-1/2 bg-indigo-500 py-10 px-10">
+        <img src="../../../assets/svg/register-banner.svg" />
+      </div>
+      <div class="w-full md:w-1/2 py-10 px-5 md:px-10">
+        <div class="text-center mb-10">
+          <h1 class="font-bold text-3xl text-gray-900">REGISTER</h1>
+          <p>Enter your information to register</p>
+        </div>
+        <div>
+          <form [formGroup]="registerData" (ngSubmit)="doRegister()">
+            <div class="flex -mx-3">
+              <div class="w-1/2 px-3 mb-5">
+                <label for="" class="text-xs font-semibold px-1"
+                  >First name</label
+                >
+                <div class="flex">
+                  <div
+                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
+                  >
+                    <i
+                      class="mdi mdi-account-outline text-gray-400 text-lg"
+                    ></i>
+                  </div>
+                  <input
+                    type="text"
+                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                    placeholder="John"
+                    formControlName="firstName"
+                  />
+                </div>
+                @if(submitted && getControl['firstName'].errors){
+                <div class="invalid-feedback">
+                  @if (getControl['firstName'].errors['required']) {
+                  <div class="text-red-600">First Name is reuired</div>
+                  }
+                </div>
+                }
+              </div>
+              <div class="w-1/2 px-3 mb-5">
+                <label for="" class="text-xs font-semibold px-1"
+                  >Last name</label
+                >
+                <div class="flex">
+                  <div
+                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
+                  >
+                    <i
+                      class="mdi mdi-account-outline text-gray-400 text-lg"
+                    ></i>
+                  </div>
+                  <input
+                    type="text"
+                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                    placeholder="Smith"
+                    formControlName="lastName"
+                  />
+                </div>
+                @if(submitted && getControl['lastName'].errors){
+                <div class="invalid-feedback">
+                  @if (getControl['lastName'].errors['required']) {
+                  <div class="text-red-600">Last Name is reuired</div>
+                  }
+                </div>
+                }
+              </div>
+            </div>
+            <div class="flex -mx-3">
+              <div class="w-full px-3 mb-5">
+                <label for="" class="text-xs font-semibold px-1">Email</label>
+                <div class="flex">
+                  <div
+                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
+                  >
+                    <i class="mdi mdi-email-outline text-gray-400 text-lg"></i>
+                  </div>
+                  <input
+                    type="email"
+                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                    placeholder="johnsmith@example.com"
+                    formControlName="email"
+                  />
+                </div>
+                @if(submitted && getControl['email'].errors){
+                <div class="invalid-feedback">
+                  @if (getControl['email'].errors['required']) {
+                  <div class="text-red-600">Email is reuired</div>
+                  }
+                </div>
+                }
+              </div>
+            </div>
+            <div class="flex -mx-3">
+              <div class="w-full px-3 mb-12">
+                <label for="" class="text-xs font-semibold px-1"
+                  >Password</label
+                >
+                <div class="flex">
+                  <div
+                    class="w-10 z-10 pl-1 text-center pointer-events-none flex items-center justify-center"
+                  >
+                    <i class="mdi mdi-lock-outline text-gray-400 text-lg"></i>
+                  </div>
+                  <input
+                    type="password"
+                    class="w-full -ml-10 pl-10 pr-3 py-2 rounded-lg border-2 border-gray-200 outline-none focus:border-indigo-500"
+                    placeholder="************"
+                    formControlName="password"
+                  />
+                </div>
+                @if(submitted && getControl['password'].errors){
+                <div class="invalid-feedback">
+                  @if (getControl['password'].errors['required']) {
+                  <div class="text-red-600">Password is reuired</div>
+                  }
+                </div>
+                }
+              </div>
+            </div>
+            <div class="flex -mx-3">
+              <div class="w-full px-3 mb-5">
+                <button
+                  type="submit"
+                  class="block w-full max-w-xs mx-auto bg-indigo-500 hover:bg-indigo-700 focus:bg-indigo-700 text-white rounded-lg px-3 py-3 font-semibold"
+                >
+                  REGISTER NOW
+                </button>
+              </div>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div> -->
+<div class="font-sans">
+  <div
+    class="relative min-h-screen flex flex-col sm:justify-center items-center bg-gray-100"
+    style="background-color: #111827"
+  >
+    <div class="relative sm:max-w-sm w-full">
+      <div
+        class="card bg-blue-400 shadow-lg w-full h-full rounded-3xl absolute transform -rotate-6"
+      ></div>
+      <div
+        class="card bg-red-400 shadow-lg w-full h-full rounded-3xl absolute transform rotate-6"
+      ></div>
+      <div class="relative w-full rounded-3xl px-6 py-4 bg-gray-100 shadow-md">
+        <label
+          for=""
+          class="block mt-3 text-sm text-gray-700 text-center font-semibold"
+        >
+          Register
+        </label>
+        <form [formGroup]="registerForm" class="mt-10">
+          <div>
+            <label for="" class="text-xs text-primary px-1">Phone Number</label>
+            <input
+              type="number"
+              formControlName="phoneNumber"
+              placeholder="Enter your Phone Number"
+              class="p-2 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+            @if(submitted && getControl['phoneNumber'].errors){
+            <div class="invalid-feedback">
+              @if (getControl['phoneNumber'].errors['required']) {
+              <div class="text-red-600">Phone Number is reuired</div>
+              }
+            </div>
+            }
+          </div>
+          <div>
+            <label for="" class="text-xs text-primary px-1">Email</label>
+            <input
+              type="email"
+              formControlName="email"
+              placeholder="Enter your email"
+              class="p-2 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+            @if(submitted && getControl['email'].errors){
+            <div class="invalid-feedback">
+              @if (getControl['email'].errors['required']) {
+              <div class="text-red-600">Email is reuired</div>
+              }
+            </div>
+            }
+          </div>
+
+          <div class="mt-3">
+            <label for="" class="text-xs text-primary px-1">Password</label>
+            <input
+              type="password"
+              formControlName="password"
+              placeholder="Enter your password"
+              class="p-2 mt-1 block w-full border-none bg-gray-100 h-11 rounded-xl shadow-lg hover:bg-blue-100 focus:bg-blue-100 focus:ring-0"
+            />
+            @if(submitted && getControl['password'].errors){
+            <div class="invalid-feedback">
+              @if (getControl['password'].errors['required']) {
+              <div class="text-red-600">Password is reuired</div>
+              }
+            </div>
+            }
+          </div>
+
+          <div class="mt-7 flex text-center">
+            <div class="w-full">
+              <a
+                class="text-sm text-blue-600 hover:text-gray-900 mr-3"
+                routerLink="/login"
+              >
+                Login
+              </a>
+              <a
+                class="underline text-sm text-gray-600 hover:text-gray-900"
+                routerLink="/forgot-password"
+              >
+                Forgot Password
+              </a>
+            </div>
+          </div>
+
+          <div class="mt-7">
+            <button
+              class="bg-blue-500 w-full py-3 rounded-xl text-white shadow-xl hover:shadow-inner focus:outline-none transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105"
+              (click)="doRegister()"
+            >
+              Register Now
+            </button>
+          </div>
+
+          <div class="flex mt-7 items-center text-center">
+            <hr class="border-gray-300 border-1 w-full rounded-md" />
+            <label class="block font-medium text-sm text-gray-600 w-full">
+              Other Login
+            </label>
+            <hr class="border-gray-300 border-1 w-full rounded-md" />
+          </div>
+
+          <div class="flex mt-7 justify-center w-full">
+            <button
+              class="border-none px-4 py-2 rounded-xl cursor-pointer text-white shadow-xl hover:shadow-inner transition duration-500 ease-in-out transform hover:-translate-x hover:scale-105"
+              style="background-color: #f87171; width: 100%"
+              (click)="loginWithpopup()"
+            >
+              Google
+            </button>
+          </div>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
